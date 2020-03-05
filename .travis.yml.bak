@@ -1,20 +1,15 @@
-language: node_js
-node_js:
-  - "11"
-dist: trusty
-sudo: false
+language: javascript
 
-install:
-  - git clone --depth 1 https://github.com/Jermolene/TiddlyWiki5.git
-  - cd TiddlyWiki5
-  - npm link
-  - cd ..
+before_install:
+  - npm install tiddlywiki
+
+install: true
 
 script:
   - mkdir -p node_modules/tiddlywiki/plugins/published/
   - cp -r plugins/* node_modules/tiddlywiki/plugins/published
-  - tiddlywiki . --output output/library --build library
-  - tiddlywiki . --output output --build gui
+  - ./node_modules/.bin/tiddlywiki . --output output/library --build library
+  - ./node_modules/.bin/tiddlywiki . --output output --build gui
 
 deploy:
   provider: pages
