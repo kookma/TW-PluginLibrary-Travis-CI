@@ -1,8 +1,4 @@
 language: node_js
-node_js:
-  - "11"
-dist: trusty
-sudo: false
 
 install:
   - git clone --depth 1 https://github.com/Jermolene/TiddlyWiki5.git
