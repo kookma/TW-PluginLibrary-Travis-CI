@@ -1,7 +1,10 @@
 language: javascript
 
 before_install:
-  - npm install tiddlywiki
+  - git clone --depth 1 https://github.com/Jermolene/TiddlyWiki5.git
+  - cd TiddlyWiki5
+  - npm link
+  - cd ..
 
 install: true
 
@@ -15,7 +18,7 @@ deploy:
   provider: pages
   local-dir: output
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  github-token: $GITHUB_API_KEY  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
   on:
     branch: master
