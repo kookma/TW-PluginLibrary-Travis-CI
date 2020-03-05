@@ -1,4 +1,4 @@
-language: javascript
+language: node_js
 
 before_install:
   - git clone --depth 1 https://github.com/Jermolene/TiddlyWiki5.git
