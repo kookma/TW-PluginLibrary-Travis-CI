@@ -1,0 +1,11 @@
+created: 20190716171918410
+modified: 20190721054445159
+tags: 
+title: $:/plugins/kookma/todolist/internals
+type: text/vnd.tiddlywiki
+
+!! Explore internal tiddlers
+<<<
+Todolist plugin uses some internal data tiddlers to create and manage todo list. Each todolist uses several data tiddlers. It is recommended after deleting a todolist, delete all data tiddlers which are not in use.
+<<<
+<<todolist-explore-data-tiddlers>>

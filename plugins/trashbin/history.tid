@@ -1,0 +1,36 @@
+created: 20190710025344738
+modified: 20190724040554123
+tags: 
+title: $:/plugins/kookma/trashbin/history
+type: text/vnd.tiddlywiki
+
+* ''1.0.0'' -- final release
+<<<
+# [NEW] restore all button has been added
+# [NEW] delete button has been added for each tiddler in trashbin
+# [NEW] the tag for tiddlers moved to trashbin is `$:/tags/trashbin`
+# [NEW] tiddlers in trashbin have a pink boredr
+# [NEW] delete and restore all buttons have icons
+# [NEW] restoring tiddlers with repeated titles (have the same title) is based on their real title not incremented ones in trashbin
+# [FIXED] the colors of move to trash bin and restore have been set consistent with tiddler controls
+# [FIXED] documentation improved
+<<<
+
+* ''0.6.0'' -- release candidate
+<<<
+# [FIXED] the position of button on toolbar fixed using the list-after field
+# [FIXED] documentation improved
+<<<
+
+* ''0.5.0 beta'' -- optimized release
+<<<
+# [NEW] restore button in fronts of each trashed tiddler in Trash Bin sidebar tab
+# [NEW] prevent overwriting existing tiddlers when restoring from trash bin
+# [NEW] move to trash bin check for duplicate tiddlers in trash bin and prevent overwriting by making it unique with a numeric suffix 
+<<<
+
+* ''0.1.0 beta'' -- initial release.
+<<<
+# Basics
+# Simple delete and restore
+<<<

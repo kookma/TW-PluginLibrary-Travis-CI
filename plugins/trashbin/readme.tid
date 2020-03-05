@@ -1,0 +1,97 @@
+created: 20190710025344739
+creator: Mohammad
+modified: 20190724045749200
+modifier: Mohammad
+tags: 
+title: $:/plugins/kookma/trashbin/readme
+type: text/vnd.tiddlywiki
+
+The concept behind trash plugin is to have a simple mechanism to move tiddlers to Trashbin and be able to restore them later if required.
+
+!! Terminology
+<<<
+; Trashbin
+: i. a collection of data tiddlers holds the deleted tiddlers
+: ii. the name of plugin and the mechanism to delete tiddlers temporarily and restore them or delete them permanently later
+
+; Delete tiddler
+: the action to //move a tiddler to Trashbin//. This action removes tiddler from wiki, but it does not eliminate it permanently.
+
+; Deleted tiddler
+: a tiddler is removed from wiki and stored in Trashbin. This tiddler can be restored.
+
+; Delete permanently
+:the action to eliminate and destroy a tiddler such that it cannot be restored anymore. This action is performed on deleted tiddlers in Trashbin.
+<<<
+
+!! How to
+<<<
+* Every tiddler has a new button as <<doc-svg $:/plugins/kookma/trashbin/images/trash-alt>> and is called ''Move to Trashbin''
+
+* On clicking on ''Move to Trashbin'' the tiddler is deleted from wiki and moved to Trashbin (//it is not removed permanently//)
+
+* A sidebar tab called ''Trashbin'' shows what is existed in the Trashbin
+
+* In sidebar tab ''Trashbin'' there is //header// and a //list// of deleted tiddlers
+** Deleted tiddlers in Trashbin list are displayed in alphanumerical order.
+** Each tiddler in Trashbin list has a ''delete permanently'' button <<doc-svg $:/plugins/kookma/trashbin/images/times.svg>>  and a ''restore'' button <<doc-svg $:/plugins/kookma/trashbin/images/recycle>> individually and let you to remove or restore a single tiddler.
+** In the header, the <<doc-svg $:/plugins/kookma/trashbin/images/trash-alt>> lets you to remove all tiddlers from Trashbin and ''delete them permanently''.
+** In the header, the <<doc-svg $:/plugins/kookma/trashbin/images/recycle>> lets you to ''restore all'' tiddlers from Trashbin.
+
+* On clicking on every tiddler in Trashbin list it is opened in story river.
+
+* Every deleted tiddler opened in story river has colored borders, a restore button as <<doc-svg $:/plugins/kookma/trashbin/images/recycle>> which is called ''Restore''
+
+* On clicking on ''restore'' button <<doc-svg $:/plugins/kookma/trashbin/images/recycle>> the tiddler is restored.
+
+* It is possible to edit the deleted tiddler, for example change `title` or other fields (indexes) and restore a modified tiddler different from the original deleted one.
+<<<
+
+!! Impotent note
+<<<
+If a tiddler is existed in Trashbin and another with the same title in TW:
+
+* when moving it to trash, a unique title is created by adding //numeric suffix//, so they never overwrite other tiddlers.
+
+* when restoring from Trashbin, a notification is appeared and notifies user and does not restore such tiddler. User needs to decide and rename the existing tiddler or modify the deleted tiddler title index in Trashbin before restoring.
+
+* Note that Trashbon title for deleting tiddlers (actually data tiddlers) does not change the real title of tiddlers which is stored in an index called `title`.
+<<<
+
+!! Install
+<<<
+Simply drag and drop $:/plugins/kookma/trashbin into your wiki, or download from [[source page|https://github.com/kookma/TW-Trashbin]]
+<<<
+
+!! Mechanism
+<<<
+Trash plugin has two parts
+
+* Move to Trashbin
+* Restore from Trashbin
+
+; By moving a tiddler to Trashbin it means
+
+# A new data tiddler created
+# The title of data tiddler is the title of objective tiddler prefixed with `$:/trashbin/`
+# All the fields of objective tiddler is moved into a new data tiddler
+# The objective tiddler is deleted
+
+
+; By restoring a tiddler from Trashbin, it means
+# A new tiddler is created
+# Its title is taken from the `title` index in data tiddler
+# All other index/value are copied to newly created tiddler fields respectively. This means every index creates a field
+# The data tiddler is deleted
+
+;Duplicates
+# Deleted tiddlers will get numeric suffix if another tiddler with same title is existed in Trashbin.
+# Tiddlers existed in wiki will never overwritten if a tiddler with the same title is tried to be restored. A notification will notify user and operation will be cancelled.
+# Note that, the real title of deleted tiddler is what stored in `title` index of data tiddler NOT the title of data tiddler itself which stores the deleted tiddler in Trashbin.
+<<<
+
+!! Project code and demo
+<<<
+* [[GitHub demo page|https://github.com/kookma/TW-Trashbin]]
+* [[GitHub code page|https://github.com/kookma/TW-Trashbin]]
+<<<

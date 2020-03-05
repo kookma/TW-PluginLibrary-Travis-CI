@@ -1,0 +1,44 @@
+caption: Trashbin
+created: 20190623140751496
+creator: Mohammad
+description: move to trashbin / restore from trashbin
+list-after: $:/core/ui/Buttons/close-others
+modified: 20190723061334812
+modifier: Mohammad
+tags: $:/tags/ViewToolbar
+title: $:/plugins/kookma/trashbin/viewtoolbar-button
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+<$list filter="[all[current]!tag[$:/tags/trashbin]!search:title[$:/trashbin/]]">
+<$button  aria-label="to be added" 
+ class=<<tv-config-toolbar-class>>
+ tooltip="Move to Trashbin" >
+ <$macrocall 
+   $name="move-to-trashbin" 
+	 tiddler=<<currentTiddler>>
+  />
+	
+<$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
+{{$:/plugins/kookma/trashbin/images/trash-alt}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>prefix[yes]]">
+<span class="tc-btn-text">
+<$text text={{$:/plugins/kookma/trashbin/viewtoolbar-button!!caption}}/>
+</span>
+</$list>
+
+	
+</$button>
+</$list>
+<$list filter="[all[current]tag[$:/tags/trashbin]search:title[$:/trashbin/]]">
+<$button aria-label="to be added" 
+ class=<<tv-config-toolbar-class>>
+ tooltip="Restore" >
+ {{$:/plugins/kookma/trashbin/images/recycle}}
+ <$macrocall 
+   $name="restore" 
+	 tiddler=<<currentTiddler>>
+  />
+</$button>
+</$list>

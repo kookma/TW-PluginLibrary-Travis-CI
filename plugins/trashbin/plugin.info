@@ -1,0 +1,11 @@
+{
+	"title": "$:/plugins/kookma/trashbin",
+	"description": "Trashbin",
+	"author": "Mohammad Rahmani",
+	"version": "2.0.0 beta 3",
+	"core-version": ">=5.1.18",
+	"source": "https://github.com/kookma/TW-Trashbin",
+	"list": "readme history license",
+	"dependents": "",
+	"plugin-type": "plugin"
+}

@@ -1,0 +1,77 @@
+created: 20190715180723489
+modified: 20190722044606096
+tags: 
+title: $:/plugins/kookma/todolist/history
+type: text/vnd.tiddlywiki
+
+!! 1.0.0 -- final release
+<<<
+; 22th July 2019
+* New categories added: `share`, `tip`, `horn`
+* Show/hide item creation timestamp
+* Min width of ui is 320px to fit the small screen of cell phones
+* Minor issues fixed
+
+<<<
+
+!! 1.0.0 -- release candidate 6
+<<<
+; 19th July 2019
+* [NEW] Priority button cycles through five levels of priority and use colors for levels
+* [NEW] New minimal interface
+* [NEW] New internal tiddlers explorer lets you to delete individual todo list
+* [NEW] Documentation exmple shows to create multiple todo list in a single tiddler
+* [Fixed] priority macros does not insert symbols any more
+
+<<<
+
+!! 1.0.0 -- release candidate 6
+<<<
+; 18th July 2019
+* Enter key in bulk edit mode terminates edit mode and returns to view mode
+* Escape key now cancels the adding new task and clears the input textbox
+
+<<<
+
+!! 1.0.0 -- release candidate 4
+<<<
+; 17th July 2019
+
+* Customizable shortcutkey for adding new item! by default `Enter` is added
+* All states were condensed into `stateTiddler`. For each state a key/value is used
+<<<
+
+!! 1.0.0 -- release candidate 2
+<<<
+; 16th July 2019
+
+* Revert to TW 5.1.19 to support more audiences
+* redesign the main UI
+** no table is used in UI
+** flexbox layout for main UI and archive display
+* supports multi todo lists in the same wiki
+* supports UI width to have custom layout (media query was removed)
+* Merge done/undone all button
+<<<
+
+!! 1.0.0 -- release candidate
+<<<
+; 15th July 2019
+
+* Upgraded to TW 5.1.20pre, so it wont work on TW5.1.19
+* redesign the Todolist UI
+* Uses the new checkbox parameters in TW 5.1.20 for uncheckactions
+* added media query to increase the ui width to 100% of tiddler width
+* add mark all items as done
+* add mark all items as undone
+* archive completed (done) items
+* show archive items
+<<<
+
+!! 0.7.0 -- bug fixes.
+<<<
+* [FIXED] data tiddler are now included in plugin
+* [FIXED] textbox placeholder message was modified
+<<<
+
+!! 0.5.0 -- first public release

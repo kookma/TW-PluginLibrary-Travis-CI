@@ -1,0 +1,51 @@
+created: 20190715170739310
+modified: 20190722034028989
+tags: $:/tags/Macro
+title: $:/plugins/kookma/todolist/macros/ui
+type: text/vnd.tiddlywiki
+
+\define todolist-ui(caption:"A plain todo list", width:"100%" base:"base")
+<$vars 
+ nameSpace="$:/plugins/kookma/todolist/data/$base$"
+ stateTiddler="$:/plugins/kookma/todolist/data/$base$/state"
+ taskTiddler="$:/plugins/kookma/todolist/data/$base$/tasks"
+ doneTiddler="$:/plugins/kookma/todolist/data/$base$/done"
+ statusTiddler="$:/plugins/kookma/todolist/data/$base$/status"
+ priorityTiddler="$:/plugins/kookma/todolist/data/$base$/priority"
+ archiveTiddler="$:/plugins/kookma/todolist/data/$base$/archive"	
+ displayArchivedTiddler="todolist - Archived Items - $base$"
+>	
+<div class="kk-todolist-ui" style="max-width:$width$;">
+
+$caption$
+
+<div class="kk-todolist-header-ui">
+<div class="kk-todolist-header-textbox"><<todolist-input-task>></div>
+<div><<todolist-add-task>></div>
+<div><<todolist-toggle-edit-button>></div>
+<div><<todolist-options-button>></div>
+</div>
+
+<<todolist-options-content>>
+
+<$list filter="[<taskTiddler>indexes[]!sort[]]" variable="item">
+<div class="kk-todolist-row">
+	<div class="kk-todolist-done"><<todolist-done-task>></div>
+	<div class="kk-todolist-desc"><<todolist-show-task>></div>
+	<div class="kk-todolist-priority"><<todolist-set-priority>></div>
+	<div class="kk-todolist-delete"><$macrocall $name="todolist-delete-task" dataTiddler=<<taskTiddler>>/></div>
+</div>
+</$list>
+<$list filter="[<doneTiddler>indexes[]!sort[]]" variable="item">
+<div class="kk-todolist-row">
+  <div class="kk-todolist-done"><<todolist-undone-task>></div>
+  <div class="kk-todolist-desc"><span class="kk-todolist-item-done">
+	<$macrocall $name="view-task" dataTiddler=<<doneTiddler>> /></span></div>
+	<div class="kk-todolist-priority"><<todolist-set-priority>></div>
+  <div class="kk-todolist-delete"><$macrocall $name="todolist-delete-task" dataTiddler=<<doneTiddler>>/></div>
+</div>
+</$list>
+
+</div>
+</$vars>
+\end

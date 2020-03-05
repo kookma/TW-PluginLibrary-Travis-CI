@@ -1,0 +1,40 @@
+created: 20190716161142919
+modified: 20190722051246465
+tags: 
+title: $:/plugins/kookma/todolist/mechanism
+type: text/vnd.tiddlywiki
+
+This tiddler explains how Todolist plugin works
+
+! Mechanism
+<<<
+Todolist plugin uses three data tiddlers (json tiddler) to store the todo items. Each todo item is an entry in data tiddler as below
+
+* a todo item is stored in task tiddler
+* a done item is stored in done tiddler
+* the status of item (done/undone) is stored in status tiddler
+
+!!! ''User interface''
+The user interface including
+
+* A todolist title (e.g caption)
+* Add new item 
+* Oprion panel
+** check/uncheck all
+** archive completed (done) items
+** display archied items
+** show/hide item created timestamp
+* A block displays items one by one with control buttons
+** done/undone button
+** item description
+** item timestamp (if visible)
+** item priority
+** delete button
+
+!!! ''Priority''
+There is five priority levels. Very high, high, normal, low, very low. The item priority can selected by clicking on the dedicated priority button. By every click the item priority changes and cycles through preset levels.
+
+
+!!! ''Categories''
+Each category has a dedicated macro. To create a category the related macro should be called. Other categories can be simply added by adding desired macros.
+<<<

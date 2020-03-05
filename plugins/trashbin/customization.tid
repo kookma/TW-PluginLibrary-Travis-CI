@@ -1,0 +1,15 @@
+created: 20190723134934716
+modified: 20190723135307162
+tags: 
+title: $:/plugins/kookma/trashbin/customization
+type: text/vnd.tiddlywiki
+
+; Colorify button on tiddler toolbar
+: Create a tiddler and tag it with `$:/tags/Stylesheet` with below contents
+<div style="padding-left:40px;">
+
+```
+html body.tc-body .tc-tiddler-controls .tc-image-trash-alt {stroke: white;fill:#660000;}
+html body.tc-body .tc-tiddler-controls .tc-image-recycle {stroke: white;fill:#138808;}
+```
+</div>

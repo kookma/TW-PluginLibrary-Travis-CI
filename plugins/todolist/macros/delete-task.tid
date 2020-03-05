@@ -1,0 +1,14 @@
+created: 20190715170610146
+modified: 20190719134051449
+tags: $:/tags/Macro
+title: $:/plugins/kookma/todolist/macros/delete-task
+type: text/vnd.tiddlywiki
+
+\define todolist-delete-task(dataTiddler)
+<$button class="tc-btn-invisible">
+{{$:/plugins/kookma/todolist/images/times.svg}}
+<$action-setfield $tiddler=<<__dataTiddler__>> $index=<<item>> />
+<$action-setfield $tiddler=<<statusTiddler>> $index=<<item>> />
+<$action-setfield $tiddler=<<priorityTiddler>> $index=<<item>> />
+</$button>
+\end
