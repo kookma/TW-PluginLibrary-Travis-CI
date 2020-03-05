@@ -15,6 +15,7 @@ script:
 deploy:
   provider: pages
   local-dir: output
+  target-branch: docs
   skip-cleanup: true
   github-token: $GITHUB_API_KEY  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
