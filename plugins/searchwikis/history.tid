@@ -1,0 +1,31 @@
+created: 20200303065501531
+modified: 20200305090959915
+title: $:/plugins/kookma/searchwikis/history
+type: text/vnd.tiddlywiki
+
+!! Revision 1.2.0
+* Date: [5th Mar 2020]
+* [FIXED] issue in generate links for tiddlers with colon (:) in their title
+* [FIXED] the index and export tiddler has a user friendly title [[Index and Export]]
+* [NEW] [[Index and Export]] supports exclude filter
+* [NEW] Index summary to show tools for manupulation the indexes
+* [NEW] Indexs can be excluded temporaririly from search
+* [NEW] improved documentation and tutorial
+
+
+!! Revision 1.1.0
+* Date: [3rd Mar 2020]
+* [FIXED] typo in documentation
+* [FIXED] temporary tiddlers are system tiddlers now
+* [FIXED] all global macros removed
+
+!! Revision 1.0.0
+* Date: [3rd Mar 2020]
+* [NEW] new index and search mechanism
+* [NEW] search multiple indexes at the same time
+* [NEW] added interface to $:/AdvancedSearch
+* [NEW] added documentation and examples
+
+!! Revision 0.5
+* Date: [1st Feb 2020]
+* First release on kookma.searchwikis.tiddlyspot.com
