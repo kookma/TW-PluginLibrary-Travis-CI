@@ -14,7 +14,7 @@ script:
   - mkdir -p node_modules/tiddlywiki/plugins/published/
   - cp -r plugins/* node_modules/tiddlywiki/plugins/published
   - tiddlywiki . --output output/library --build library
-  - tiddlywiki . --output output --build gui
+  - tiddlywiki . --output output --build doc
 
 deploy:
   provider: pages
