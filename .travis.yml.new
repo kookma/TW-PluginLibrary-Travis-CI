@@ -1,19 +1,21 @@
-language: javascript
+language: node_js
 
-before_install:
-  - npm install tiddlywiki
-
-install: true
+install:
+  - git clone --depth 1 https://github.com/Jermolene/TiddlyWiki5.git
+  - cd TiddlyWiki5
+  - npm link
+  - cd ..
 
 script:
   - mkdir -p node_modules/tiddlywiki/plugins/published/
   - cp -r plugins/* node_modules/tiddlywiki/plugins/published
-  - ./node_modules/.bin/tiddlywiki . --output output/library --build library
-  - ./node_modules/.bin/tiddlywiki . --output output --build gui
+  - tiddlywiki . --output output/library --build library
+  - tiddlywiki . --output output --build gui
 
 deploy:
   provider: pages
   local-dir: output
+#  target-branch: gh-pages
   skip-cleanup: true
   github-token: $GITHUB_API_KEY  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
