@@ -1,0 +1,32 @@
+created: 20180803171123709
+creator: Mohammad
+modified: 20190810043102987
+modifier: Mohammad
+tags: $:/tags/Macro
+title: $:/plugins/kookma/tiddlyshow/macro/show-thumbnails
+type: text/vnd.tiddlywiki
+
+\define show-thumbnails(parent)
+ <div class="tiddlyshow-thumbnails tiddlyshow-thumbnails-container">
+  <$list filter="[tag[$parent$]!tag[slideFooter]!tag[thumbnails]]">
+    <$button class="tc-btn-invisible ts-thumbnail-btn" 
+      to=<<currentTiddler>> 
+      set="$:/state/tiddlyshow/presentation" 
+      setTo=<<currentTiddler>>
+    >
+      
+       <div class="ts-thumbnail">
+
+        <$transclude tiddler="$:/plugins/kookma/tiddlyshow/viewtemplate/thumbnails"/>
+
+          <span class="ts-thumbnail-number">
+            <$count filter='[tag[$parent$]!tag[slideFooter]!tag[thumbnails]allbefore:include<currentTiddler>]'/>
+          </span>
+   
+      </div>
+
+    </$button>
+
+  </$list>
+ </div>  
+\end

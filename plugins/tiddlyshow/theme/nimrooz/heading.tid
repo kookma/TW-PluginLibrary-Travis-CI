@@ -1,0 +1,15 @@
+created: 20180729194823847
+creator: Mohammad
+modified: 20190810043103339
+modifier: Mohammad
+title: $:/plugins/kookma/tiddlyshow/theme/nimrooz/heading
+type: text/vnd.tiddlywiki
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock 
+
+/* format tiddler title as first heading in slide */
+[data-tags*="<<sl>>"][data-tags~="slide"] .tc-title{
+  font-size:1.5em; 
+	font-weight:450; 
+	color:#E83D32; 
+}

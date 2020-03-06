@@ -1,0 +1,65 @@
+caption: Create a new slide here
+created: 20180504084439629
+creator: Mohammad
+modified: 20190811110720480
+modifier: Mohammad
+tags: $:/tags/Macro
+title: $:/plugins/kookma/tiddlyshow/macro/new-item
+type: text/vnd.tiddlywiki
+
+\define items() slide slideTitle slideHeader twoColumn
+
+\define slide-content()
+* topic one
+* topic two 
+\end
+
+\define slideTitle-content()
+\rules only
+! Main Title
+!! Subtitle
+!!! Author<br>Department<br>Institute
+
+!!! Date
+\end
+
+\define slideHeader-content()
+\rules only
+! {{!!title}}
+!! Subtitle
+\end
+
+
+\define newTiddler(param:"", slType:"slide", btn-caption:"") 
+<$list filter="[enlist<items>title<__slType__>addsuffix[-content]]" variable="slContent">
+<$wikify name=bodyText text="""<$macrocall $name=<<slContent>>/>""" format="text">
+<$button class="tc-btn-invisible tc-tiddlylink">
+$btn-caption$
+<$action-sendmessage $message="tm-new-tiddler"
+    title="New $slType$ ..."
+    tags="$slType$ [[$param$]]"
+		text=<<bodyText>>
+/>
+</$button>
+</$wikify>
+</$list>
+\end
+
+\define newItem(param:"", btn-caption:"New item")
+<$button popup=<<qualify "stateHirad">> style="fill:#8058A5;color:#8058A5;margin-bottom:5px;">
+{{$:/core/images/new-button}} $btn-caption$
+</$button>
+
+<$reveal state=<<qualify "stateHirad">> type="popup" position="belowleft" animate="yes">
+<div class="tc-block-dropdown-wrapper">
+<div class="tc-block-dropdown tc-edit-type-dropdown">
+<div class="tc-dropdown-item-plain">
+ <<newTiddler param:"""$param$""" slType:"slide" btn-caption:"Slide">><br>
+ <<newTiddler param:"""$param$""" slType:"twoColumn" btn-caption:"Two content">><br>
+ <<newTiddler param:"""$param$""" slType:"slideTitle" btn-caption:"Slide title">><br>
+ <<newTiddler param:"""$param$""" slType:"slideHeader" btn-caption:"Slide header">>		
+</div>
+</div>
+</div>
+</$reveal>
+\end

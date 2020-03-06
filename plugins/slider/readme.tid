@@ -1,0 +1,62 @@
+created: 20181101134242465
+creator: Mohammad
+modified: 20190614115410022
+modifier: Mohammad
+tags: 
+title: $:/plugins/kookma/slider/readme
+type: text/vnd.tiddlywiki
+
+!! What ia slider plugin?
+Slider is a small plugin to create an ordered set of tiddlers also called ''Trail''.
+
+A trail can be used to create a sequence of selected contents like step by step tutorial, guided help, lessons and similar.
+
+The slider plugin user interface contains three sections
+
+# A sidebar tab called ''Trails'' to manage trails
+# A ''dashboard'' for each trail (where trail structure is managed)
+# Tiddlers in a trail, also called ''slides''
+
+!! How to create a trail
+From the sibebar tab ''Trails'' click on the ''Create new trail'' button. In the newly opened tiddler:
+
+# Enter a short name for //title//
+#* This title is used as a parent //tag// for all slides in the trail
+# Enter a meaningful caption to describe the subject of trail
+#* Caption is displayed in ''Trails'' sidebar tab, so it used to find and recognize the trail
+# Save the tiddler
+#* After saving the dashboard will be appeared
+#* Using dashboard, manage the trail
+
+!! Add slides to trail
+Slides (tiddlers) can be added to a specified trail in several ways including:
+
+# By clicking on the `New slide` button on the trail dashboard
+# By dragging and droping a tiddler into the `List of slides` on the trail dashboard
+# By opening the `sidebar / Trails` tab and then clicking on the `Add slide to ...` button
+# By creating new tiddler and tagging with the specified trail title
+# By tagging an exisiting tiddler with the specified trail title
+
+!! Create slide footer 
+* The slider footer can be used to add a text to all slides in a trail.
+* The slider footer is an ordinary tiddler and can be opned and edited
+* The slider footer has the same title of trail with `-Footer` prefix and tagged with `slideFooter`
+* The footer can be used for date stamp, author and institution name or any other information you like.
+* The footer can be formatted for color, size, font and etc. It can accept all the standard markup.
+
+!! Navigate through slides
+# Set the desired trail as the active trail by opening it and clicking on `Set for presentation`
+# From the //List of slides// click on the first slide or any slide you like to start from
+# One the footer of newly opened slide, click on the next button to navigate to the next slide
+# You can click on the slide-list button to open a local window and see the list of all slides, then you can click on any slide you like and jump to that slide
+# The slide footer also has a //previous// button which lets to navigate to previous slide in the list
+
+
+!! Demo
+There few trails for demonstration on
+https://kookma.github.io/slider/
+
+!! Installation
+Simply drag and drop the below ling into your wiki
+
+* $:/plugins/kookma/slider

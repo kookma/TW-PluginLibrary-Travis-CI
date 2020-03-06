@@ -1,0 +1,15 @@
+created: 20180928062320000
+creator: Mohammad
+modified: 20190810043103174
+modifier: Mohammad
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/tiddlyshow/stylesheet/thumbnails-tiddler
+type: text/css
+
+/* Set the border and background of tiddlers containing thumbnails (tagged with thumbnails)
+*/
+
+[data-tags~="thumbnails"] {
+  border: 1px solid #999;
+  background-color: #f0efea; 
+}

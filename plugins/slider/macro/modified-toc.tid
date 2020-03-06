@@ -1,0 +1,23 @@
+created: 20181103191736109
+creator: Mohammad
+modified: 20190614034620798
+modifier: Mohammad
+tags: 
+title: $:/plugins/kookma/slider/macro/modified-toc
+type: text/vnd.tiddlywiki
+
+\define toc-se(tag,sort:"",itemClassFilter,exclude,path)
+<$vars tag="""$tag$""" sort="""$sort$""" itemClassFilter="""$itemClassFilter$""" excluded="""$exclude$ -[[$tag$]]""" path="""$path$/$tag$""">
+  <ol class="tc-toc toc-selective-expandable">
+    <$list filter="""[all[shadows+tiddlers]tag[$tag$]!has[draft.of]$sort$] -[[$tag$]] $exclude$""">
+      <$list filter="[all[current]toc-link[no]]" variable="ignore" emptyMessage=<<toc-selective-expandable-empty-message>> >
+        <$macrocall $name=toc-unlinked-selective-expandable-body tag="""$tag$""" sort="""$sort$""" itemClassFilter="""$itemClassFilter$""" exclude=<<excluded>> path=<<path>> >
+      </$list>
+    </$list>
+  </ol>
+</$vars>
+\end
+
+<!-- IMPORTANT Note: 11:22, 6th November 2018
+This is a clone of toc-selective-expandable from TW5.1.17. In the new release the toc macro and specially the exclude attribute has been modified which does not allow exclude tiddlers (say "-[tag[myTag]]" and similar). So this clone of toc-selective-expandable (here called toc-se) is used.
+-->

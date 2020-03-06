@@ -1,0 +1,59 @@
+created: 20191113142630002
+modified: 20191119055003400
+tags: 
+title: $:/plugins/kookma/pinboard/readme
+type: text/vnd.tiddlywiki
+
+This is a plugin to create a [[pinboard|https://en.wikipedia.org/wiki/Bulletin_board]]
+
+* a pinboard contains some notices pinned on a board
+* a notice is a tiddler tagged with `pin`
+* a notice is removed from board if it is tagged with `done`
+* a notice has a priority. The priority of a notice tiddler is set through adding a field entitled `priority`
+* The priority filed value can only be chosen from the below value
+** red
+** blue
+** green
+** yellow
+* The priority actually set the color of pin and the background color of note
+* If the priority field is missed the white color is used!
+
+!! How to create a pinboard
+A macro entitled `pinboard-ui` creates a pinboard. It lists and displays all notices in a multi column layout.
+
+The syntax is as below
+
+```
+<<pinboard-ui>>
+```
+
+* a notice shown by `pinboard-ui` on hover
+**  has a link to the notice tiddler, on click it will be opened and get focused
+**  has a folding editor, on click the entry can be edited
+* a notice shown by `pinboard-ui` has a toggle button (the colored pin) to tag the notice as `done`
+
+;Note
+:When a notice tagged as done it will be removed from the pinboard
+
+!! How to create a new notice
+There are two routes to do this
+
+# In the pinboard you see a gray icon floating right, on click it will create a new notice with yellow priority
+# You can also create a notice from a new tiddler or from existing ones as below
+#* create new tiddler, if you want to use exsiting one, edit it
+#* tag it with `pin`
+#* add a custom field called `priority` and set a value like red, yellow, blue, or green
+#* save the tiddler, that's all.
+
+!! Use online Google font
+It is possible to use the script font Satisfy from Google as defualt font for notices. To set Google font open the setting tab from Plugins page, Pinboard tab or directly from [[$:/plugins/kookma/pinboard]] as below
+
+{{$:/plugins/kookma/pinboard/settings}}
+
+!! Cork board
+To add a corkboard as a background to your pinboard, so as follow
+
+* Create a new tiddler
+* Fill in the text with `<<pinboard-ui>>` 
+* add a custom field entitled `class`
+* fill in the value with `corkboard`

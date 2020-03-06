@@ -1,0 +1,21 @@
+created: 20191113144855730
+modified: 20191118124058384
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/pinboard/styles/pin-colors
+type: text/css
+
+.st-red-pin:after {
+  background-color: red;
+}
+
+.st-blue-pin:after {
+  background-color: blue;
+}
+
+.st-yellow-pin:after {
+  background-color: yellow;
+}
+
+.st-green-pin:after {
+  background-color: green;
+}

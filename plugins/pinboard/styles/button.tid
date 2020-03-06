@@ -1,0 +1,15 @@
+created: 20191114140024292
+creator: Mohammad
+modified: 20191118162354804
+modifier: Mohammad
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/pinboard/styles/button
+type: text/css
+
+.st-note .tc-btn-invisible { outline:none; }
+
+.st-btn svg{
+fill:lightgray;
+width: 2em !important;
+height: 2em !important;
+vertical-align: middle;}

@@ -1,0 +1,13 @@
+created: 20190728130954966
+modified: 20190807125356967
+title: $:/plugins/kookma/timelines/styles/colors/light
+type: application/json
+
+{
+    "class": "light",
+    "color": "#818182",
+    "background": "#fefefe",
+    "border": "#818182",
+    "link":"#686868",
+    "light-background":"#ededed"
+}

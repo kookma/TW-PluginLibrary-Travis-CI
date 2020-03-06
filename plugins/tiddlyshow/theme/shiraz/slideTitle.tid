@@ -1,0 +1,39 @@
+created: 20190620181224167
+modified: 20190810043103290
+title: $:/plugins/kookma/tiddlyshow/theme/shiraz/slideTitle
+type: text/vnd.tiddlywiki
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock 
+
+/* tiddlyshow plugin
+Stylesheet for slide Title page
+*/
+
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-title {
+color: #000;
+}
+
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-tiddler-body {
+ text-align: center;
+ min-height: 70vh;
+}
+
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-tiddler-body h1,
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-tiddler-body h2,
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-tiddler-body h3,
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-tiddler-body h4 {
+  font-weight:500;
+  padding-bottom: 0.2em;
+}
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-tiddler-body h1{
+  font-size:5em;
+
+}
+
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-tiddler-body h2{
+  font-size:3em;
+}
+
+[data-tags*="<<sl>>"][data-tags ~="slideTitle"] .tc-tiddler-body h3{
+  font-size:2em;
+}

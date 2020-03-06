@@ -1,0 +1,24 @@
+caption: Create a new slide here
+created: 20180504084439629
+creator: Mohammad
+modified: 20190613151047175
+modifier: Mohammad
+tags: $:/tags/Macro
+title: $:/plugins/kookma/slider/macro/new-slide-here
+type: text/vnd.tiddlywiki
+
+\define content()
+fill in the contents ....
+\end
+
+\define newSlide(param:"", btn-caption:"New slide", color:"#8058A5") 
+<$button style="color:$color$; fill:$color$; margin-bottom:5px;">
+{{$:/core/images/new-button}} $btn-caption$
+
+<$action-sendmessage $message="tm-new-tiddler"
+    title="New slide..."
+    text=<<content>>
+    tags="[[$param$]]"
+/>
+</$button>
+\end

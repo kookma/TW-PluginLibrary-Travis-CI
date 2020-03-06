@@ -1,0 +1,27 @@
+created: 20190802111248208
+creator: Mohammad
+modified: 20190809091129857
+modifier: Mohammad
+tags: $:/tags/Macro
+title: $:/plugins/kookma/timelines/macros/ilam/pull-next
+type: text/vnd.tiddlywiki
+
+\define __tlIlam-PullNext()
+<!-- number of items displayed on screen: 3 -->
+<$vars
+ first-item={{{ [list<container>first[1]] }}}
+ last-item={{{ [list<container>last[1]] }}}
+>
+
+<$action-setfield $tiddler=<<container>> list=""/>
+<$list filter="[subfilter<__filter__>allafter:include<last-item>first[3]count[]] -1 -2 ~[[::false]]" variable=result>
+   <$list filter="[<result>prefix[::false]]" variable=ignore>
+        <$action-listops $tiddler=<<container>> $subfilter="[subfilter<__filter__>last[3]]"/>
+   </$list>
+   <$list filter="[<result>!prefix[::false]]" variable=case>
+        <$action-listops $tiddler=<<container>> $subfilter="[subfilter<__filter__>allafter:include<last-item>first[3]] ~[subfilter<__filter__>last[3]]"/>  
+   </$list> 
+</$list>
+
+</$vars>
+\end

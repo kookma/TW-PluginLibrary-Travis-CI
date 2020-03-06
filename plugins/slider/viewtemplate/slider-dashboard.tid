@@ -1,0 +1,67 @@
+caption: Trail Template
+created: 20180527182942488
+creator: Mohammad
+modified: 20190705051936332
+modifier: Mohammad
+tags: $:/tags/ViewTemplate
+title: $:/plugins/kookma/slider/viewtemplate/slider-dashboard
+type: text/vnd.tiddlywiki
+
+\define draggable-list-of-slides()
+ <div class="sliderDashboard-slide-list">
+    <h2>List of slides</h2>
+    <h4>Drag and drop your slides (tiddlers) here to add them to this trail or reorder the list</h4>
+    <ol>
+      <<list-tagged-draggable 
+      tag:"""$(currentTiddler)$"""
+      subFilter:"!tag[slideFooter]"
+      itemTemplate:"$:/plugins/kookma/slider/template/draggable"
+      emptyMessage:"You don't have any slide in this trail"
+      >>
+    </ol>
+ </div>    
+\end
+
+\define show-slider-header()
+  <div class="sliderDashboard-header">
+    <b>Trail caption:</b> <$text text={{!!caption}}/><br>
+    <b>Trail tag:</b> <$text text={{!!title}}/><br>
+    <b>Number of slides:</b> <$count filter="[tag<currentTiddler>!tag[slideFooter]]"></$count><br>
+  </div>
+\end  
+
+\define show-slider-footer()
+ <div class="sliderDashboard-footer">
+  <b>Slide footer:</b>
+  <$list filter="[title[$(currentTiddler)$]addsuffix[ - Footer]]  +[has[title]]" 
+         variable="slide-footer" 
+         emptyMessage=<<newSlideFooter """$(currentTiddler)$""">>
+  >       
+    <$link to=<<slide-footer>> tooltip="Click to edit"> <<slide-footer>> </$link>
+    <$transclude tiddler=<<slide-footer>> field="text" mode="block"/> 
+  </$list>
+  </div>
+\end
+
+\define show-slider-buttons()
+  <div class="sliderDashboard-buttons">
+  <<newSlide param:"""$(currentTiddler)$"""
+     caption:"New slide here"
+     color:"#00d">>
+  <br>
+  <$button style="fill:#8058A5;"
+      set="$:/plugins/kookma/slider/state!!current-trail"
+      setTo={{!!title}}
+    >
+      {{$:/plugins/kookma/slider/images/slide.svg}} Set for presentation
+    </$button> 
+  </div>
+\end
+
+
+<$list filter="[all[current]tag[trail]]"><!--If this tiddler is a trail show dashboard elements-->
+  <<show-slider-header>> <br>
+  <<show-slider-buttons>>
+  <<draggable-list-of-slides>> <br>
+  <<show-slider-footer>>
+</$list>

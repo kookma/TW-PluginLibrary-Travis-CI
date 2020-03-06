@@ -1,0 +1,13 @@
+caption: Create new slider
+created: 20180527185543611
+creator: Mohammad
+modified: 20190810043102977
+modifier: Mohammad
+tags: $:/tags/Macro
+title: $:/plugins/kookma/tiddlyshow/manager/new-slideshow
+type: text/vnd.tiddlywiki
+
+<$button tooltip="Create new slideshow" class="tc-btn-visible" style="fill:#8058A5;color:#8058A5;">
+<$action-sendmessage $message="tm-new-tiddler" caption="Set the caption ..." theme="simple" tags="slideshow"/>
+{{$:/plugins/kookma/tiddlyshow/images/new-slideshow.svg}} New slideshow
+</$button>

@@ -1,0 +1,8 @@
+created: 20190804113037299
+modified: 20190804153547321
+tags: 
+title: $:/plugins/kookma/timelines/templates/ilam
+type: text/vnd.tiddlywiki
+
+<h1><$transclude field="title"/></h1>
+<$transclude mode="block"/>

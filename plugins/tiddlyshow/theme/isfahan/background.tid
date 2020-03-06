@@ -1,0 +1,28 @@
+created: 20190620154357536
+modified: 20190810043103117
+title: $:/plugins/kookma/tiddlyshow/theme/isfahan/background
+type: text/vnd.tiddlywiki
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock 
+
+/*
+[data-tags ~="slideTitle"],
+[data-tags ~="slideHeader"],
+[data-tags ~="slide"]   {
+color:#ffffff;
+} */
+
+/*lemon*/
+[data-tags ~="slideTitle"]{
+background: linear-gradient(to right, #FFEE70 0%, #FFFACD 50px, #ffffff 40%);
+}
+
+/*Orange*/
+[data-tags ~="slideHeader"]   {
+background: linear-gradient(to right, #FF7D32 0%, #FFEEE5 50px, #ffffff 40%);
+}
+
+/*orange border*/
+[data-tags ~="slide"]{
+background: linear-gradient(to right, #B2DBFF 0%, #EAF5FF 50px, #ffffff 40%);
+}

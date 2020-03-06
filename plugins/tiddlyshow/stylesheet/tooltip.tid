@@ -1,0 +1,46 @@
+created: 20180728144429505
+creator: Mohammad
+modified: 20190810043103170
+modifier: Mohammad
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/tiddlyshow/stylesheet/tooltip
+type: text/css
+
+.tiddlyshow-tooltip {
+    position: relative;
+    display: inline-block;
+
+}
+
+.tiddlyshow-tooltip .tiddlyshow-tooltiptext {
+    visibility: hidden;
+    background-color: #ffffff;
+    color: #111111;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 12px;
+    min-width: 360px;
+    max-height: 60vh;
+    overflow-y: auto;
+		
+   /*font size*/
+   font-size:1.20em;
+   line-height:1.20em;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -40px;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
+}
+
+.tiddlyshow-tooltip:hover .tiddlyshow-tooltiptext {
+    visibility: visible;
+}
+
+/*Change the color of list item on mouse hover or focus*/
+.tiddlyshow-tooltip .tiddlyshow-tooltiptext ol li:hover, ol li:focus {
+ color:blue;
+}

@@ -1,0 +1,13 @@
+created: 20190728130345162
+modified: 20190807125132908
+title: $:/plugins/kookma/timelines/styles/colors/danger
+type: application/json
+
+{
+    "class": "danger",
+    "color": "#721c24",
+    "background": "#f8d7da",
+    "border": "#f5c6cb",
+    "link":"#491217",
+    "light-background":"#fdf4f5"
+}

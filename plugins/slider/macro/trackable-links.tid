@@ -1,0 +1,23 @@
+created: 20180729154346545
+creator: Mohammad
+modified: 20190613151047171
+modifier: Mohammad
+tags: $:/tags/Macro
+title: $:/plugins/kookma/slider/macro/trackable-links
+type: text/vnd.tiddlywiki
+
+\define trackable-links(tag:"")
+  <ol>
+    <$list filter="[tag[$tag$]!tag[slideFooter]]" variable="myTid">
+      <li>
+        <$button class="tc-btn-invisible" style="text-align: left;"
+          set="$:/plugins/kookma/slider/state" 
+          setTo=<<myTid>>
+          >
+            <$view tiddler=<<myTid>> field="title"/>
+            <$action-navigate $to=<<myTid>>/>
+        </$button>
+      </li>
+    </$list>
+  </ol>
+\end

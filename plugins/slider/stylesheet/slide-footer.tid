@@ -1,0 +1,56 @@
+created: 20180907070611557
+creator: Mohammad
+modified: 20190614025939297
+modifier: Mohammad
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/slider/stylesheet/slide-footer
+type: text/css
+
+.slider-slide-footer {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider-slide-footer{  
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  background-color: #efefef;
+ opacity: 0.55;
+}
+
+.slider-slide-footer:hover{
+  opacity: 1.0;   
+}
+
+.slider-slide-footer-buttons{
+  display:flex;
+  justify-content: space-around;
+  width:120px;
+  margin-left:5px;
+  outline:none;
+}
+
+.slider-slidenumber{
+    height: 22pt;
+    width: 22pt;
+    line-height:22pt;
+    border-radius: 50%;
+    text-align: center;
+    margin-right:5px;
+}
+
+.slider-slidenumber{
+    background: gray;
+    color: #fff;
+    font-size:1em;
+    font-weight:700;  
+}
+.buttons-no-outline {
+  outline:none;
+} /*remove the blue border on button focus */

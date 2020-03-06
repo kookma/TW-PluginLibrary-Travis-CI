@@ -1,0 +1,17 @@
+created: 20181103192144604
+creator: Mohammad
+modified: 20190614090728387
+modifier: Mohammad
+tags: 
+title: $:/plugins/kookma/slider/manager/trail-list
+type: text/vnd.tiddlywiki
+
+<$importvariables filter="$:/plugins/kookma/slider/macro/modified-toc">
+<$scrollable class='slider-trail-list'>
+<div class="tc-table-of-contents">
+  <<toc-se tag:"trail" exclude:"-[tag[slideFooter]]">>
+</div>
+</$scrollable>
+</$importvariables>
+
+

@@ -1,0 +1,74 @@
+created: 20190806191421721
+modified: 20190809193007184
+tags: 
+title: $:/plugins/kookma/timelines/readme
+type: text/vnd.tiddlywiki
+
+!! How to use
+<<<
+Timelines is a collection of four macros for creating vertical and horizontal timeline and sequence. The content or description and data of events are stored in individual tiddlers. 
+
+Timelines contain two timeline macros and two sequence macros. A sequence macro shows event contents in sequence not necessarily in chronological order. The order can be determined by tag or list field or other methods.
+
+The date of events can be stored in a separate field or the `modified` field can be used.
+<<<
+
+!! Syntax
+<<<
+```
+<<timeline-horizontal filter limit:10 template:"" footer:"footer" 
+                      class date:"modified" stateTiddler dateformat:"YYYY">>
+<<sequence-horizontal filter limit:10 template:"" footer:"footer" 
+                      class date:"modified" stateTiddler dateformat:"mmm DDth YYYY">>
+
+<<timeline-vertical filter limit:10 template:"" footer:"footer" class date:"modified">>
+<<sequence-vertical filter limit:10 template:"" footer:"footer" class date:"modified">>
+```
+!! Content and parameters
+
+|Parameter |Type    |Description |h
+|filter    |required|a Tiddlywiki filter to select tiddlers for presentation |
+|limit  | optional|maximum number of tiddlers to be shown. Default value is 10|
+|template  |optional|a template to display the tiddler content|
+|footer |optional|the field name which stores an extra text to be displayed as footer|
+|class|optional|an extra class to customize how tiddler content is displayed|
+|date      |optional|the field name which stores a date in standard Tiddlywiki format. Default field is `modified`|
+|stateTiddler |optional|the name of a state tiddler to keep the state of events. Each call to macro needs a unique state tiddler|
+|dateformat |optional|only in `timeline-horizontal` and `timeline-vertical`, the format for displaying event date.|
+
+More explanation with examples can be found at [[GitHub demo page|https://kookma.github.io/TW-Timelines/#Filter%20Parameter:%5B%5BFilter%20Parameter%5D%5D%20%5B%5BColor%20classes%5D%5D%20%5B%5BTemplate%20Parameter%5D%5D]].
+
+!!! The dateformat parameter
+The dateformat lets to customize the event date displayed on the timeline.
+
+;timeline-horizontal
+For `timeline-horizontal`  macro the default value is `YYYY`,  the other two forms of date are 
+
+* `mmm DDth`, and 
+* `0DD mmm YYYY`. 
+
+Other format will not be displayed!
+
+;timeline-vertical
+For the `timeline-vertical` macro the default value is `mmm DDth YYYY`,  the other two forms of date are 
+
+* `mmm DDth` to show only the month and day and hide year
+* `YYYY` to show only year and hide the month
+
+Other format will not be displayed!
+
+!!! Important note
+When the `timeline-horizontal` is used, the timeline at first does not show the event date on the line. This is because the macro uses a state tiddler at first it does not exist. Simply click on pull previous or pull next buttons to create the state tiddler and show the events date. Note that the state tiddlers here are prefixed with `$:/state-tl/ilam` and so when TW closed and reopened the state tiddler will not removed.
+<<<
+
+! Install
+<<<
+Simply drag and drop $:/plugins/kookma/timelines into your wiki
+<<<
+
+
+! Project code and demo
+<<<
+* [[GitHub demo page|https://kookma.github.io/TW-Timelines/]]
+* [[GitHub code page|https://github.com/kookma/TW-Timelines]]
+<<<

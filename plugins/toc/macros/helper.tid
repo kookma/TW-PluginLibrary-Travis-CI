@@ -1,0 +1,15 @@
+created: 20200220082105852
+modified: 20200227232831717
+tags: $:/tags/Macro/Toc
+title: $:/plugins/kookma/toc/macros/helper
+type: text/vnd.tiddlywiki
+
+\define tidSelectedItem() $:/temp/toc/selected-item/$(stateTiddler)$
+\define tidToggleState()  $:/temp/toc/toggle/$(stateTiddler)$
+
+\define tidShowMode()  $:/temp/toc/show-mode/$(stateTiddler)$
+\define tidExpandAll() $:/temp/toc/expand-all//$(stateTiddler)$
+\define tidShowTools() $:/temp/toc/show-tools/$(stateTiddler)$
+
+\define tidTocTemplate()    $:/plugins/kookma/toc/templates/show-single-item
+\define tidBookmarkConfig() $:/config/toc/bookmarks/$(stateTiddler)$

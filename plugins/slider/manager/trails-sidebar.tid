@@ -1,0 +1,19 @@
+caption: Trails
+created: 20180527184455440
+creator: Mohammad
+modified: 20190614085255628
+modifier: Mohammad
+tags: $:/tags/SideBar
+title: $:/plugins/kookma/slider/manager/trails-sidebar
+type: text/vnd.tiddlywiki
+
+\define btn-label() Add slide to $(current-trail)$
+
+{{$:/plugins/kookma/slider/manager/new-trail}}{{$:/plugins/kookma/slider/toggle-slider-theme}}
+<$set name="current-trail" value={{$:/plugins/kookma/slider/state!!current-trail}}>
+  <$macrocall $name="newSlide" 
+    param=<<current-trail>>
+    btn-caption=<<btn-label>> />
+</$set>
+{{$:/plugins/kookma/slider/manager/trail-list}}
+

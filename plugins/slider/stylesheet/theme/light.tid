@@ -1,0 +1,38 @@
+created: 20181028153618499
+creator: Mohammad
+modified: 20190627195937471
+modifier: Mohammad
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/slider/stylesheet/theme/light
+type: text/css
+
+/* Set styles for the trail viewtemplate */
+
+[data-tags~="trail"] {
+  border: 1px solid #999;
+  background-color: #f0efea;
+}
+
+.sliderDashboard-header,
+.sliderDashboard-footer {
+  background-color:#fcfdfe;
+  padding: 5px;
+}
+.sliderDashboard-buttons {
+  float:right;
+  padding:8px;
+}
+
+.sliderDashboard-slide-list{
+  min-height:250px;
+  color:#111;
+  background-color:#fff;
+  border-radius:3px;
+  padding:12px;
+}
+
+
+.slider-trail-list {
+  background-color:#eee;
+  height: 400px; 
+}

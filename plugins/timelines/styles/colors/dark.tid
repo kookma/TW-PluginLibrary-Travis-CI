@@ -1,0 +1,13 @@
+created: 20190728131052818
+modified: 20190807125535256
+title: $:/plugins/kookma/timelines/styles/colors/dark
+type: application/json
+
+{
+    "class": "dark",
+    "color": "#1b1e21",
+    "background": "#d6d8d9",
+    "border": "#c6c8ca",
+    "link":"#040505",
+    "light-background":"#f0f1f2"
+}

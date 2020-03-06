@@ -1,0 +1,13 @@
+created: 20190728125523989
+modified: 20190807125239308
+title: $:/plugins/kookma/timelines/styles/colors/warning
+type: application/json
+
+{
+    "class": "warning",
+    "color": "#856404",
+    "background": "#fff3cd",
+    "border": "#ffeeba",
+    "link":"#533f03",
+    "light-background":"#fffbef"
+}

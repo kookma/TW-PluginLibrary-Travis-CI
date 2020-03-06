@@ -1,0 +1,37 @@
+created: 20181028155841125
+creator: Mohammad
+modified: 20190810043103138
+modifier: Mohammad
+title: $:/plugins/kookma/tiddlyshow/theme/dashboard/toggle
+type: text/vnd.tiddlywiki
+
+\define fullName() $:/plugins/kookma/tiddlyshow/theme/dashboard/$(themeTid)$
+\define SetRemoveTags(tidNames:"", tags:"")
+<!-- This macro sets tags, to remove tags send empty tags parameter -->
+<$list filter="[enlist<__tidNames__>]" variable="themeTid">
+<$action-setfield $tiddler=<<fullName>> tags="$tags$"/>
+</$list>
+\end
+
+<$reveal type="nomatch" state="$:/plugins/kookma/tiddlyshow/state/tiddlyshow-theme" text="dark">
+  <$button style="fill:#8058A5;color:#8058A5;"
+    tooltip="Set manager/dashboard theme to dark"
+  > {{$:/core/images/palette}} Dark dashboard
+    <$action-setfield $tiddler="$:/plugins/kookma/tiddlyshow/state/tiddlyshow-theme" text="dark"/>
+		<!-- remove $:/tags/Stylesheet from light theme-->
+    <<SetRemoveTags tidNames:"light light-background" tags:"">> 
+		<!-- set $:/tags/Stylesheet from dark theme-->
+		<<SetRemoveTags tidNames:"dark dark-background" tags:"$:/tags/Stylesheet">>
+  </$button>
+</$reveal>
+<$reveal type="nomatch" state="$:/plugins/kookma/tiddlyshow/state/tiddlyshow-theme" text="light">
+  <$button style="fill:#8058A5;color:#8058A5;"
+    tooltip="Set manager/dashboard theme to light"
+  > {{$:/core/images/palette}} Light dashboard
+    <$action-setfield $tiddler="$:/plugins/kookma/tiddlyshow/state/tiddlyshow-theme" text="light"/>
+		<!-- remove $:/tags/Stylesheet from dark theme-->
+    <<SetRemoveTags tidNames:"dark dark-background" tags:"">> 
+		<!-- set $:/tags/Stylesheet from ligt theme-->
+		<<SetRemoveTags tidNames:"light light-background" tags:"$:/tags/Stylesheet">>
+  </$button>
+</$reveal>

@@ -1,0 +1,21 @@
+created: 20180920050645315
+creator: Mohammad
+modified: 20190810043103218
+modifier: Mohammad
+title: $:/plugins/kookma/tiddlyshow/viewtemplate/thumbnails
+type: text/vnd.tiddlywiki
+
+\define frame-classes()
+$(missingTiddlerClass)$ $(shadowTiddlerClass)$ $(systemTiddlerClass)$ $(tiddlerTagClasses)$ $(userClass)$
+\end
+\define folded-state()
+$:/state/folded/$(currentTiddler)$
+\end
+<$vars storyTiddler=<<currentTiddler>> tiddlerInfoState=<<qualify "$:/state/popup/tiddler-info">> userClass={{!!class}}><$tiddler tiddler=<<currentTiddler>>><div data-tiddler-title=<<currentTiddler>> data-tags={{!!tags}} class=<<frame-classes>>><$list filter="[[$:/core/ui/ViewTemplate/body]]" variable="listItem"><$transclude tiddler=<<listItem>>/></$list>
+</div>
+</$tiddler></$vars>
+
+<!-- 
+This is a copy of $:/core/ui/ViewTemplate with some small changes to hide the tag, title and subtitles.
+This is part of thumbnails macro
+-->

@@ -1,0 +1,50 @@
+created: 20180722195027124
+creator: Mohammad
+modified: 20190627195937468
+modifier: Mohammad
+tags: 
+title: $:/plugins/kookma/slider/stylesheet/theme/dark
+type: text/vnd.tiddlywiki
+
+<pre>/* Set styles for the slider viewtemplate */
+
+[data-tags ~="{{$:/plugins/kookma/slider/state!!current-trail}}"]  {
+    background-color:#d9edf7;
+    color:#31708f;
+}
+
+[data-tags~="trail"] {
+  border: 1px solid #999;
+  background-color: #f0efea; 
+}
+
+.sliderDashboard-header,
+.sliderDashboard-footer {
+  background-color:#fcfdfe;
+  padding: 5px;
+}
+.sliderDashboard-buttons {
+  float:right;
+  padding:8px;
+}
+
+.sliderDashboard-slide-list{
+  min-height:250px;
+  color:#dfdfdf;
+  background-color:#4e4a4a; /*ffffeb */
+  border-radius:3px;
+  padding:12px;
+}
+
+.sliderDashboard-slide-list .tc-tiddlylink      {  color:#dfdfdf;}
+.sliderDashboard-slide-list .tc-tiddlylink:hover{  color:#dfdfdf;}
+
+.slider-trail-list {
+  text-shadow:none;
+  background-color:#4e4a4a;
+  height: 400px; 
+}
+
+.slider-trail-list a.tc-tiddlylink      {  color:#dfdfdf;}
+.slider-trail-list a.tc-tiddlylink:hover{  color:#dfdfdf;}
+</pr>

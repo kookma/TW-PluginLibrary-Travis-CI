@@ -1,0 +1,89 @@
+caption: Trail Template
+created: 20180527182942488
+creator: Mohammad
+modified: 20190810050733947
+modifier: Mohammad
+tags: $:/tags/ViewTemplate
+title: $:/plugins/kookma/tiddlyshow/viewtemplate/tiddlyshow-dashboard
+type: text/vnd.tiddlywiki
+
+\define draggable-list-of-slides()
+ <div class="tiddlyshowDashboard-slide-list-underlayer"><!-- used to apply color under background image -->
+ <div class="tiddlyshowDashboard-slide-list">
+    <h2>List of slides</h2>
+    <h4>Drag and drop your slides (tiddlers) here to add them to this slideshow or reorder the list</h4>
+    <ol>
+      <<list-tagged-draggable 
+      tag:"""$(currentTiddler)$"""
+      subFilter:"!tag[slideFooter]!tag[thumbnails]"
+      itemTemplate:"$:/plugins/kookma/tiddlyshow/template/draggable"
+      emptyMessage:"You don't have any slide in this slideshow"
+      >>
+    </ol>
+ </div></div>    
+\end
+
+\define select-theme()
+<$select 
+  tooltip="select a slideshow theme"
+  tiddler=<<currentTiddler>>
+  field="theme"
+><!-- the below lists all avialable themes -->
+<$list filter="[all[tiddlers+shadows]tag[$:/tags/Tiddlyshow/Theme]]" variable="theme">
+<$list filter="[<theme>split[$:/plugins/kookma/tiddlyshow/theme/]split[/main]!is[blank]sort[]]" variable="themeName">
+<option value=<<themeName>>><$text text=<<themeName>> /></option>
+</$list></$list>
+</$select>
+\end
+
+\define show-tiddlyshow-header()
+  <div class="tiddlyshowDashboard-header">
+    <b>Trail caption:</b> <$text text={{!!caption}}/><br>
+    <b>Trail tag:</b> <$text text={{!!title}}/><br>
+    <b>Number of slides:</b> <$count filter="[tag<currentTiddler>!tag[slideFooter]!tag[thumbnails]]"></$count><br>
+	  <b>Trail theme: </b><<select-theme>><br>
+  </div>
+\end  
+
+\define show-tiddlyshow-footer()
+ <div class="tiddlyshowDashboard-footer">
+  <b>Slide footer:</b>
+  <$list filter="[title[$(currentTiddler)$]addsuffix[ - Footer]]  +[has[title]]" 
+         variable="slide-footer" 
+         emptyMessage=<<newSlideFooter """$(currentTiddler)$""">>
+  >       
+    <$link to=<<slide-footer>> tooltip="Click to edit"> <<slide-footer>> </$link>
+    <$transclude tiddler=<<slide-footer>> field="text" mode="block"/> 
+  </$list>
+  </div>
+\end
+
+\define show-tiddlyshow-buttons()
+  <div class="tiddlyshowDashboard-buttons">
+  <<newItem param:"""$(currentTiddler)$""" btn-caption:"New item">>
+  <br>
+	<$button style="fill:#8058A5;color:#8058A5;margin-bottom:5px;">
+     {{ $:/plugins/kookma/tiddlyshow/images/thumbnails.svg}} Thumbnails
+     <<create-thumbnails "$(currentTiddler)$">>
+  </$button>
+	<br>	
+  <$button style="fill:#8058A5;color:#8058A5;"
+      set="$:/plugins/kookma/tiddlyshow/state!!current-slideshow"
+      setTo={{!!title}}
+    >
+      {{$:/plugins/kookma/tiddlyshow/images/slideshow.svg}} Set for presentation
+    </$button> 
+  </div>
+\end
+
+
+<$list filter="[all[current]tag[slideshow]]"><!--If this tiddler is a slideshow show dashboard elements-->
+  <<show-tiddlyshow-header>> <br>
+  <<show-tiddlyshow-buttons>>
+  <<draggable-list-of-slides>> <br>
+  <<show-tiddlyshow-footer>>
+</$list>
+
+
+
+

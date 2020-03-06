@@ -1,0 +1,29 @@
+created: 20180905085705897
+creator: Mohammad
+modified: 20190810043103204
+modifier: Mohammad
+title: $:/plugins/kookma/tiddlyshow/release
+type: text/vnd.tiddlywiki
+version: 1.2
+
+!! Revision 1.1 
+<<<
+* Date: [13th Jun 2019]
+* Slide view mode has been removed
+* sliderTiddler renamed to sliderDashboard
+* Minor issues fixed
+* Plugin packged using Thirdflow
+<<<
+
+!! Revision 1.0.1 
+<<<
+* Date: [9th Nov 2018]
+* Added background color class
+* Customized buttons in slide footer
+<<<
+
+!! Revision 1.0.0 
+<<<
+* Date: [1th Nov 2018]
+* Initial release
+<<<

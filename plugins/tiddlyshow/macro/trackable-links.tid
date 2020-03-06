@@ -1,0 +1,34 @@
+created: 20180729154346545
+creator: Mohammad
+modified: 20190810043102980
+modifier: Mohammad
+tags: $:/tags/Macro
+title: $:/plugins/kookma/tiddlyshow/macro/trackable-links
+type: text/vnd.tiddlywiki
+
+\define thumbnails-link(parent)
+<$list filter="[[$parent$]addsuffix[-thumbnails]]" variable="thumbsTid" emptyMessage="Not found!">
+<$button class="tc-btn-invisible"> <b>Slide thumbnails</b>
+<<create-thumbnails "$parent$">>
+</$button><!-- this creates a button, on click shows the thumbnails tiddler -->
+</$list>
+\end
+
+\define trackable-links(tag:"")
+  <<thumbnails-link "$tag$">>
+  <ol>
+    <$list filter="[tag[$tag$]!tag[slideFooter]!tag[thumbnails]]" variable="myTid">
+      <li>
+        <$button class="tc-btn-invisible" style="text-align: left;"
+          set="$:/plugins/kookma/tiddlyshow/state" 
+          setTo=<<myTid>>
+          >
+            <$view tiddler=<<myTid>> field="title"/>
+            <$action-navigate $to=<<myTid>>/>
+        </$button>
+      </li>
+    </$list>
+  </ol>
+\end
+
+<!-- To be documented -->

@@ -1,0 +1,21 @@
+created: 20180605133423316
+creator: Mohammad
+key: ((next-slide))
+modified: 20190810043103202
+modifier: Mohammad
+tags: $:/tags/KeyboardShortcut
+title: $:/plugins/kookma/tiddlyshow/shortcutkey/next-slide
+type: text/vnd.tiddlywiki
+
+<$navigator story="$:/StoryList" history="$:/HistoryList">
+
+<$set name="parent" value={{$:/plugins/kookma/tiddlyshow/state!!current-slideshow}}>
+  <$set name="currentSlide" value={{$:/plugins/kookma/tiddlyshow/state}}>
+    <$list filter="[tag<parent>!tag[slideFooter]!tag[thumbnails]after<currentSlide>]">
+      <$action-setfield $tiddler="$:/plugins/kookma/tiddlyshow/state" text={{!!title}} />
+      <$action-navigate $to={{!!title}}/>
+    </$list>
+  </$set>
+</$set>
+
+</$navigator>

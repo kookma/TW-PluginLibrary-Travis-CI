@@ -1,0 +1,26 @@
+created: 20181028155841125
+creator: Mohammad
+modified: 20190614025740912
+modifier: Mohammad
+tags: 
+title: $:/plugins/kookma/slider/toggle-slider-theme
+type: text/vnd.tiddlywiki
+
+<$reveal type="nomatch" state="$:/plugins/kookma/slider/state/slider-theme" text="dark">
+  <$button style="fill:#8058A5;color:#8058A5;"
+    tooltip="Set theme to dark"
+  > {{$:/core/images/palette}}
+    <$action-setfield $tiddler="$:/plugins/kookma/slider/state/slider-theme" text="dark"/>
+    <$action-setfield $tiddler="$:/plugins/kookma/slider/stylesheet/theme/dark"  tags="$:/tags/Stylesheet"/>
+    <$action-setfield $tiddler="$:/plugins/kookma/slider/stylesheet/theme/light" tags=""/>
+  </$button>
+</$reveal>
+<$reveal type="nomatch" state="$:/plugins/kookma/slider/state/slider-theme" text="light">
+  <$button style="fill:#8058A5;color:#8058A5;"
+    tooltip="Set theme to light"
+  > {{$:/core/images/palette}}
+    <$action-setfield $tiddler="$:/plugins/kookma/slider/state/slider-theme" text="light"/>
+    <$action-setfield $tiddler="$:/plugins/kookma/slider/stylesheet/theme/light"  tags="$:/tags/Stylesheet"/>
+    <$action-setfield $tiddler="$:/plugins/kookma/slider/stylesheet/theme/dark" tags=""/>
+  </$button>
+</$reveal>

@@ -1,0 +1,35 @@
+created: 20191113172026632
+modified: 20191118162307138
+tags: $:/tags/Macro
+title: $:/plugins/kookma/pinboard/macros/pinboard-ui
+type: text/vnd.tiddlywiki
+
+\define _st-create-new-note()
+<span style="float:right">
+<$button  class="tc-btn-invisible tc-tiddlylink st-btn" tooltip="create new notice">
+<$action-sendmessage $message="tm-new-tiddler" tags="pin" priority="yellow" text="write here ..." />
+{{$:/plugins/kookma/pinboard/images/file-alt}}
+</$button>
+</span>
+\end
+
+\define _st_addTag(newTag)
+<$fieldmangler>
+<$action-sendmessage $message="tm-add-tag" $param="$newTag$"/>
+</$fieldmangler>
+\end
+
+\define _st_single_note(tiddler, priority)
+<div class="st-note st-bg-$priority$">
+<span class="st-elements"><$link/></span><<folding-editor """$tiddler$""">>
+<$button class="tc-btn-invisible tc-tiddlylink st-pin st-$priority$-pin" actions=<<_st_addTag newTag:done>> tooltip="remove note"/>
+<span class="st-elements">Modified on: <$view field="modified" format=date template="YYYY-0MM-0DD"/></span>
+</div>
+\end
+
+\define pinboard-ui()
+<<_st-create-new-note>>
+<$list filter="[tag[pin]!tag[done]!has[draft.of]]">
+<$macrocall $name="_st_single_note" tiddler=<<currentTiddler>> priority={{!!priority}}/>
+</$list>
+\end

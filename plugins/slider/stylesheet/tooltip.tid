@@ -1,0 +1,37 @@
+created: 20180728144429505
+creator: Mohammad
+modified: 20190614031606722
+modifier: Mohammad
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/slider/stylesheet/tooltip
+type: text/css
+
+.slider-tooltip {
+    position: relative;
+    display: inline-block;
+
+}
+
+.slider-tooltip .slider-tooltiptext {
+    visibility: hidden;
+    background-color: #ffffff;
+    color: #111111;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+    min-width: 360px;
+    max-height: 60vh;
+    overflow-y: auto;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -40px;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
+}
+
+.slider-tooltip:hover .slider-tooltiptext {
+    visibility: visible;
+}

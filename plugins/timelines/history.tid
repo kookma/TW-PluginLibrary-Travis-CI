@@ -1,0 +1,29 @@
+created: 20190728105034927
+modified: 20190809095334421
+tags: 
+title: $:/plugins/kookma/timelines/history
+type: text/vnd.tiddlywiki
+
+!! 1.0.0 -- final release
+<<<
+; 9th August 2019
+* The `timeline-horizontal` gets data format to control how event date is displayed
+* Timelines macros have gotten new name for consistency
+* Several demo tiddlers have been added
+* Documentation has been improved
+<<<
+
+!! 0.6.0 -- beta release
+<<<
+; 31st July 2019
+* New tehran timeline added
+* New ilam timeline added
+<<<
+
+!! 0.5.0 -- first release
+<<<
+; 28th July 2019
+* added gilan timeline
+* added kerman timeline
+
+<<<

@@ -1,0 +1,19 @@
+caption: Create a new slide footer
+created: 20181004194512056
+creator: Mohammad
+modified: 20190613151047178
+modifier: Mohammad
+tags: $:/tags/Macro
+title: $:/plugins/kookma/slider/macro/new-slide-footer
+type: text/vnd.tiddlywiki
+
+\define newSlideFooter(parent:"", btn-caption:"New slide footer", color:"#8058A5") 
+<$button style="color:$color$; fill:$color$; margin-bottom:5px;">
+{{$:/core/images/new-button}} $btn-caption$
+
+<$action-sendmessage $message="tm-new-tiddler"
+    title="""$parent$ - Footer"""
+    tags="slideFooter [[$parent$]]"
+/>
+</$button>
+\end
