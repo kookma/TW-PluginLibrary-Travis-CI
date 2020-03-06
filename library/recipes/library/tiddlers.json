@@ -26,6 +26,19 @@
         "readme": "<style> .dsvg svg{width: 1.2em;height: 1.2em;vertical-align: middle;}</style>\n\n!! How to use\nThe Favorites plugin adds the <span class=dsvg>{{$:/plugins/kookma/favorites/image}}</span> button to the tiddler view Toolbar and also the `Favorites` tab to the sidebar.\n\nThe button becomes `red` when selected and then the tiddler appears in the list on the `Favorites` tab.  The list can be sorted using drag and drop of items.\n\nA tiddler can be removed from the `Favorites` tab by either\n\n* opening it and clicking again on the <span class=dsvg>{{$:/plugins/kookma/favorites/image}}</span> button. or\n* click on remove button in `Favorites` list on the sidebar\n\nThe ''Favorites plugin'' contains three modes\n\n* ''flat mode'': one favorite list, no folder\n* ''structured mode'': use folder, search tool, export and delete tool\n* ''frozen list'': read only, simple table of content style\n\nFavorites plugin also supports folder operation, export and bulk operations.\n\n!! Tutorial\n* For detailed description and demo see: [[https://kookma.github.io/TW-Favorites/]]\n* For latest update and code see: [[https://github.com/kookma/TW-Favorites]]\n"
     },
     {
+        "title": "$:/plugins/flibbles/relink",
+        "description": "Relink - flexibility when relinking renamed tiddlers",
+        "author": "Flibbles",
+        "version": "1.5.4",
+        "core-version": ">=5.1.14",
+        "source": "https://github.com/flibbles/tw5-relink",
+        "list": "readme configuration",
+        "dependents": "",
+        "plugin-type": "plugin",
+        "type": "application/json",
+        "readme": "When renaming a tiddler, Relink can update the fields, filters, and widgets\nof all other tiddlers. However, it works through whitelisting.\n\nIt's already configured to update tiddler titles for all core widgets, filters,\nand fields, but the whitelists can be customized for each of this in the\nconfiguration panel.\n\nSee [[the tw5-relink website|https://github.com/flibbles/tw5-relink]] for\nmore details and examples.\n"
+    },
+    {
         "title": "$:/plugins/kookma/searchwikis",
         "description": "Searchwikis",
         "author": "Mohammad Rahmani",
