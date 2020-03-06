@@ -1,8 +1,8 @@
 /*\
 created: 20190214160253135
 type: application/javascript
-title: $:/plugins/kookma/commander/snr/macros/regexpsub.js
-modified: 20200107061558629
+title: $:/plugins/kookma/commander/snr/macros/regexpsubjs
+modified: 20200306052857205
 module-type: macro
 description: Developed by Mark S
 
