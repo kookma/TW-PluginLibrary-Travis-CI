@@ -1,8 +1,0 @@
-created: 20180926153157940
-creator: Mohammad
-modified: 20190810043103167
-modifier: Mohammad
-title: $:/plugins/kookma/tiddlyshow/template/draggable
-type: text/vnd.tiddlywiki
-
-<li><$link to={{!!title}}><$text text={{!!title}}/></$link></li>

@@ -1,8 +1,0 @@
-created: 20190704100137028
-modified: 20190810043103002
-title: $:/plugins/kookma/tiddlyshow/images/thumbnails.svg
-type: text/vnd.tiddlywiki
-
-<svg class="tc-image-button tc-image-slide-button" height="22pt" width="22pt" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-  <path d="M19 24H1a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V25a1 1 0 0 0-1-1zm-1 18H2V26h16v16zM43 0H25a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm-1 18H26V2h16v16zM19 0H1a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm-1 18H2V2h16v16zm25 6H25a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V25a1 1 0 0 0-1-1zm-1 18H26V26h16v16z"/>
-</svg>
