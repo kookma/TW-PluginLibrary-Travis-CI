@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Kookma Plugin Library — Tiddlywiki pluings</title>
+<title>Kookma Plugin Library — Plugins for Tiddlywiki5</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -141,6 +141,12 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/_CodeMirror/Firefox-Setting</li>
+
+<li>$:/_EditorPreview</li>
+
+<li>$:/config/KookmaPluginLibrary</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
@@ -152,8 +158,6 @@ Error message and password prompt
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
-
-<li>$:/favicon.ico</li>
 
 <li>$:/isEncrypted</li>
 
@@ -195,9 +199,31 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
 
-<li>Library</li>
+<li>gui//tiddlywiki.info</li>
 
-<li>Moahammad Plugin Library</li>
+<li>Home</li>
+
+<li>Kookma Plugins</li>
+
+<li>License</li>
+
+<li>Mohammad</li>
+
+<li>plugin</li>
+
+<li>Shiraz</li>
+
+<li>Slider</li>
+
+<li>Status</li>
+
+<li>Tiddler Commander</li>
+
+<li>Todolist</li>
+
+<li>Trashbin</li>
+
+<li>Utility</li>
 
 </ul>
 </p>
@@ -209,16 +235,33 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20200303060849755" modified="20200303060850776" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all" type="text/vnd.tiddlywiki">
+<div created="20181223191617706" modified="20200306122806748" tags="$:/tags/Stylesheet" title="$:/_CodeMirror/Firefox-Setting" type="text/css">
+<pre>/*Adjust the font of Codemirror on FF browser*/
+.CodeMirror {
+font-family: Consolas, monospace;
+font-size: 15px;
+}</pre>
+</div>
+<div caption="Spell check" created="20181114185428659" modified="20200306120803234" tags="$:/tags/EditPreview" title="$:/_EditorPreview" type="application/x-tiddler">
+<pre>&lt;style&gt;
+.tc-spell-check-preview {width:100%;}
+&lt;/style&gt;</pre>
+</div>
+<div caption="Kookma Plugin Library" created="20200306121057751" modified="20200306122806730" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
+<pre>Kookma plugin library is a set of plugins developed by [[Mohammad|https://github.com/kookma]]. A good recommendation is to backup your data before installing any plugins. These plugins distributed under  MIT license.
+
+To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin Library|$:/config/KookmaPluginLibrary]]</pre>
+</div>
+<div created="20200306120543239" modified="20200306122806759" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200303060848516" modified="20200303060849555" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home" type="text/vnd.tiddlywiki">
+<div created="20200306120543728" modified="20200306122806755" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200303130327160" modified="20200303130328190" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/clone" type="text/vnd.tiddlywiki">
+<div created="20200306123404394" modified="20200306123405419" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/clone" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
-<div created="20200303130329784" modified="20200303130330809" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others" type="text/vnd.tiddlywiki">
+<div created="20200306123402835" modified="20200306123403858" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others" type="text/vnd.tiddlywiki">
 <pre>show</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.21">
@@ -9414,11 +9457,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20180117192907380" modified="20180117192908405" title="$:/DefaultTiddlers">
-<pre>Library</pre>
-</div>
-<div created="20200203054929682" creator="Mohammad" modified="20200303071710560" modifier="Mohammad" tags="" title="$:/favicon.ico" type="image/png">
-<pre>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</pre>
+<div created="20200306120509454" modified="20200306122831752" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki">
+<pre>[tag[start]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -12018,13 +12058,13 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200303060816713" modified="20200303193917008" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki">
-<pre>Tiddlywiki pluings</pre>
+<div created="20200306120448308" modified="20200306120503581" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki">
+<pre>Plugins for Tiddlywiki5</pre>
 </div>
-<div created="20200303060808357" modified="20200303193922222" title="$:/SiteTitle" type="text/vnd.tiddlywiki">
+<div created="20200306120431703" modified="20200306120439775" title="$:/SiteTitle" type="text/vnd.tiddlywiki">
 <pre>Kookma Plugin Library</pre>
 </div>
-<div list="GettingStarted" title="$:/StoryList">
+<div created="20200306123956281" list="Home [[Kookma Plugins]]" modified="20200306123956281" title="$:/StoryList" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12150,20 +12190,141 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200303060738936" modified="20200303060739970" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth" type="text/vnd.tiddlywiki">
+<div created="20200306120522408" modified="20200306122806763" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth" type="text/vnd.tiddlywiki">
 <pre>550px</pre>
 </div>
-<div created="20200303060734708" modified="20200305092105855" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout" type="text/vnd.tiddlywiki">
+<div created="20200306120518697" modified="20200306122806767" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout" type="text/vnd.tiddlywiki">
 <pre>fluid-fixed</pre>
 </div>
-<div created="20180117192907380" modified="20180117192908405" title="Library">
-<pre>{{$:/config/KookmaPluginLibrary}}</pre>
+<div title="gui//tiddlywiki.info" type=".info">
+<pre>{
+    &quot;description&quot;: &quot;Basic client-server edition&quot;,
+    &quot;plugins&quot;: [
+        &quot;tiddlywiki/tiddlyweb&quot;,
+        &quot;tiddlywiki/filesystem&quot;,
+        &quot;tiddlywiki/highlight&quot;,
+		&quot;kookma/shiraz&quot;,
+		&quot;kookma/utility&quot;,
+		&quot;kookma/todolist&quot;
+    ],
+    &quot;themes&quot;: [
+        &quot;tiddlywiki/vanilla&quot;,
+        &quot;tiddlywiki/snowwhite&quot;
+    ],
+    &quot;build&quot;: {
+        &quot;index&quot;: [
+            &quot;--rendertiddler&quot;,
+            &quot;$:/plugins/tiddlywiki/tiddlyweb/save/offline&quot;,
+            &quot;index.html&quot;,
+            &quot;text/plain&quot;
+        ],
+        &quot;externalimages&quot;: [
+            &quot;--savetiddlers&quot;,
+            &quot;[is[image]]&quot;,
+            &quot;images&quot;,
+            &quot;--setfield&quot;,
+            &quot;[is[image]]&quot;,
+            &quot;_canonical_uri&quot;,
+            &quot;$:/core/templates/canonical-uri-external-image&quot;,
+            &quot;text/plain&quot;,
+            &quot;--setfield&quot;,
+            &quot;[is[image]]&quot;,
+            &quot;text&quot;,
+            &quot;&quot;,
+            &quot;text/plain&quot;,
+            &quot;--rendertiddler&quot;,
+            &quot;$:/plugins/tiddlywiki/tiddlyweb/save/offline&quot;,
+            &quot;externalimages.html&quot;,
+            &quot;text/plain&quot;
+        ],
+        &quot;static&quot;: [
+            &quot;--rendertiddler&quot;,
+            &quot;$:/core/templates/static.template.html&quot;,
+            &quot;static.html&quot;,
+            &quot;text/plain&quot;,
+            &quot;--rendertiddler&quot;,
+            &quot;$:/core/templates/alltiddlers.template.html&quot;,
+            &quot;alltiddlers.html&quot;,
+            &quot;text/plain&quot;,
+            &quot;--rendertiddlers&quot;,
+            &quot;[!is[system]]&quot;,
+            &quot;$:/core/templates/static.tiddler.html&quot;,
+            &quot;static&quot;,
+            &quot;text/plain&quot;,
+            &quot;--rendertiddler&quot;,
+            &quot;$:/core/templates/static.template.css&quot;,
+            &quot;static/static.css&quot;,
+            &quot;text/plain&quot;
+        ]
+    }
+}</pre>
 </div>
-<div caption="Kookma Plugin Library" created="20160309143802331" modified="20160309204655688" tags="$:/tags/PluginLibrary" title="Moahammad Plugin Library" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
-<pre>The plugin library for the plugins made by mklauber. This library only contains plugins that are mature enough for general use. Be aware that I update these plugins on occasion.
+<div created="20200306120555869" modified="20200306123307606" tags="start" title="Home" type="text/vnd.tiddlywiki">
+<pre>{{Status}}
 
-Copy this link to add the plugin library:  [[Moahammad Plugin Library]]
+!! Inroduction
+&lt;&lt;&lt;
+This wiki demonstrates most useful plugins developed by [[Mohammad]] for Tiddlywiki 5. To see the list of plugins and brief descriptions see [[Kookma Plugins]]
+&lt;&lt;&lt;
+
+!! How to use (install)
+&lt;&lt;&lt;
+# Simply drag and drop [[$:/config/KookmaPluginLibrary]] to your wiki
+# Open $:/ControlPanel in your wiki
+# Goto Plugins tab
+# Click on the ''Get more plugins'' button
+# Under ''Kookma Plugin Library'' click Open plugin library
+# In the list of plugins appeared, click install on those plugins you like to install in your wiki
+&lt;&lt;&lt;
+
+&lt;&lt;alert info &quot;''Note'': Installing new plugins from Kookma library is similar to installing plugins from Official library.&quot;&gt;&gt;</pre>
+</div>
+<div created="20200306120825160" modified="20200306123622221" tags="start" title="Kookma Plugins" type="text/vnd.tiddlywiki">
+<pre>These are the list of mature plugins
+
+&lt;&lt;tabs tabsList:&quot;[tag[plugin]!has[draft.of]]&quot; default:&quot;Shiraz&quot; class:&quot;tc-vertical&quot;&gt;&gt;</pre>
+</div>
+<div created="20200306121643078" modified="20200306122806725" tags="" title="License" type="application/x-tiddler">
+<pre>Copyright (c) 2018-2020 [[Mohammad Rahmani|https://github.com/kookma]]
+
+&lt;&lt;&lt;
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+&lt;&lt;&lt;
 </pre>
+</div>
+<div Email="m[dot]rahmani[at]aut[dot]ac[dot]ir" Github="https://github.com/kookma" created="20180823200810883" modified="20200306122806744" tags="kookma" title="Mohammad" type="application/x-tiddler">
+<pre></pre>
+</div>
+<div created="20200306123637234" list="Shiraz [[Tiddler Commander]] Todolist Trashbin Utility Slider sample" modified="20200306123711899" title="plugin" type="text/vnd.tiddlywiki">
+<pre></pre>
+</div>
+<div code="https://github.com/kookma/Shiraz" created="20200306123405522" demo="https://kookma.github.io/Shiraz/" modified="20200306123949275" name="Shiraz" tags="plugin" title="Shiraz" type="text/vnd.tiddlywiki">
+<pre>Shiraz is a small framework including stylesheets and macros to create stylish contents in Tiddlywiki. It uses modified CSS classes from Bootstrap 4.3.1. Shiraz has customized elements like alerts, cards, panels, images, tables, badges, texts, ...
+
+Shiraz release 2 is a rewrite of Shiraz 1.2 and aims to be a micro TW (CSS+macro) framework 
+</pre>
+</div>
+<div code="" created="20200306123414338" demo="" modified="20200306123419727" name="" tags="plugin" title="Slider" type="text/vnd.tiddlywiki">
+<pre></pre>
+</div>
+<div created="20190315074043002" modified="20200306123345083" tags="doc" title="Status" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;dbadge Tiddlywiki 5.1.21+ primary&gt;&gt; &lt;&lt;dbadge License MIT success&gt;&gt; &lt;&lt;dbadge Release &quot;1.0.0&quot; warning&gt;&gt; &lt;&lt;dbadge Status &quot;statble&quot; danger&gt;&gt;</pre>
+</div>
+<div code="" created="20200306123448043" demo="" modified="20200306123455902" name="" tags="plugin" title="Tiddler Commander" type="text/vnd.tiddlywiki">
+<pre></pre>
+</div>
+<div code="" created="20200306123431465" demo="" modified="20200306123437933" name="" tags="plugin" title="Todolist" type="text/vnd.tiddlywiki">
+<pre></pre>
+</div>
+<div code="" created="20200306123420746" demo="" modified="20200306123431017" name="" tags="plugin" title="Trashbin" type="text/vnd.tiddlywiki">
+<pre></pre>
+</div>
+<div code="" created="20200306123438859" demo="" modified="20200306123448152" name="" tags="plugin" title="Utility" type="text/vnd.tiddlywiki">
+<pre></pre>
 </div>
 
 </div>
