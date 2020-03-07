@@ -1,0 +1,13 @@
+title: $:/plugins/flibbles/relink/ui/components/button-delete
+
+\define lingo-base() $:/plugins/flibbles/relink/language/Buttons/
+
+<$button class="tc-btn-invisible"><$list filter="[all[current]is[tiddler]]">
+<$action-deletetiddler $tiddler=<<currentTiddler>> />
+</$list><$list filter="[all[current]is[shadow]]">
+<$action-setfield $tiddler=<<tiddlerName>> text="" />
+</$list>
+<$list filter="[<tv-config-toolbar-icons>prefix[yes]]">{{$:/core/images/delete-button}}</$list>
+<$list filter="[<tv-config-toolbar-text>prefix[yes]]">
+<span class="tc-btn-text"><$text text={{$(lingo-base)$Delete/Caption}}/></span>
+</$list></$button>
